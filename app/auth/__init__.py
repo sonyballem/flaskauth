@@ -23,7 +23,7 @@ def login():
             db.session.add(user)
             db.session.commit()
             login_user(user)
-            flash("Welcome")
+            flash("Welcome", 'success')
             return redirect(url_for('auth.dashboard'))
     return render_template('login.html', form=form)
 
@@ -96,7 +96,7 @@ def edit_user(user_id):
         user.password = form.password.data
         db.session.add(user)
         db.session.commit()
-        flash('User Edited Successfully')
+        flash('User Edited Successfully', 'success')
         return redirect(url_for('auth.browse_users'))
     return render_template('profile_edit.html', form=form)
 
