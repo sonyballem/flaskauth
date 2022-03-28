@@ -15,4 +15,3 @@ flask_sqlalchemy
 flask-login
 bcrypt
 email_validator
-wtforms
